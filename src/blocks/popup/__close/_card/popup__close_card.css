@@ -1,0 +1,13 @@
+.popup__close_card {
+  width: 40.7px;
+  height: 40.7px;
+  background-size: 40.7px 40.7px;
+}
+
+@media screen and (max-width: 570px) {
+  .popup__close_card {
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+  }
+}

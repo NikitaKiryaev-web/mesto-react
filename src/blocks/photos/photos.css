@@ -1,0 +1,7 @@
+.photos {
+  max-width: 882px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  gap: 21px 18px;
+  justify-content: center;
+}

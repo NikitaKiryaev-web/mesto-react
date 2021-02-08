@@ -1,0 +1,10 @@
+.photos__illustration {
+  width: 100%;
+  height: 282px;
+  object-fit: cover;
+}
+
+.photos__illustration:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

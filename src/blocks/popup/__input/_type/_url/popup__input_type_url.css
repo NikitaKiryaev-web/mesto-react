@@ -1,0 +1,44 @@
+.popup__input_type_url {
+}
+
+.popup__input_type_url::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #c4c4c4;
+}
+
+.popup__input_type_url:-moz-placeholder {
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #c4c4c4;
+}
+.popup__input_type_url:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #c4c4c4;
+}
+
+@media screen and (max-width: 570px) {
+  .popup__input_type_url::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #c4c4c4;
+  }
+
+  .popup__input_type_url:-moz-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #c4c4c4;
+  }
+  .popup__input_type_url:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #c4c4c4;
+  }
+}
