@@ -2,14 +2,13 @@ import '../index.css';
 import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
-import PopupWithForm from './PopupWithForm';
 import ImagePopup from './ImagePopup';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import {CurrentUserContext} from '../contexts/CurrentUserContext';
 import {useState, useEffect} from 'react'
-import api from '../utils/Api';
+import api from '../utils/api';
 
 
 
