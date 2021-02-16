@@ -1,3 +1,4 @@
+ //Класс для работы с API
  class Api {
   constructor(options) {
     this._url = options.url;
