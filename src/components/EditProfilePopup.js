@@ -38,16 +38,16 @@ function EditProfilePopup(props) {
     onClose={props.onClose}
     buttonText='Сохранить'
     onSubmit={handleSubmit}
-    children={
+    >
       <>
-      <input type="text" id='name' minLength="2" maxLength="40" value={userName} onChange={handleChangeName} required name="name" autoComplete="off" placeholder="Введите ваше имя" className="popup__input popup__input_type_name"/>
+      <input type="text" id='name' minLength="2" maxLength="40" value={userName || ''} onChange={handleChangeName} required name="name" autoComplete="off" placeholder="Введите ваше имя" className="popup__input popup__input_type_name"/>
       <span id='name-error' className="popup__error"></span>
-      <input type="text" id='profession' minLength="2" maxLength="200" value={userDescription} onChange={handleChangeDescription} required name="profession" autoComplete="off" placeholder="Чем вы занимаетесь?" className="popup__input popup__input_type_profession"/>
-      <span id='profession-error' class="popup__error"></span>
+      <input type="text" id='profession' minLength="2" maxLength="200" value={userDescription || ''} onChange={handleChangeDescription} required name="profession" autoComplete="off" placeholder="Чем вы занимаетесь?" className="popup__input popup__input_type_profession"/>
+      <span id='profession-error' className="popup__error"></span>
       </>
-      }
+      
     
-  />
+    </PopupWithForm>
   )
 }
 

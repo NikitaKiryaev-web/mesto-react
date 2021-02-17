@@ -79,6 +79,7 @@ function App() {
         setCurrentUser(res);
         closeAllPopups();
       })
+      .catch(err => console.log(`Error: ${err}`));
   }
 
   function handleCardLike(card) {
@@ -97,9 +98,10 @@ function App() {
   function handleCardDelete(card) {
     api.deleteCard(card._id)
       .then(res => {
-        const newCards = cards.filter(item => item._id !== res._id);
+        const newCards = cards.filter(item => item._id !== card._id);
         setCards(newCards);
       })
+      .catch(err => console.log(`Error: ${err}`));
 
   }
 
@@ -109,7 +111,7 @@ function App() {
         setCards([res, ...cards]);
         closeAllPopups();
       })
-      .catch(err => {console.log(`Error: ${err}`)});
+      .catch(err => console.log(`Error: ${err}`));
   }
 
   return (
