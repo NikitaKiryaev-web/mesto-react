@@ -1,3 +1,4 @@
+import React from 'react';
 import '../index.css';
 import Footer from './Footer';
 import Header from './Header';
@@ -21,8 +22,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
 
-
-
+  
   useEffect(() => {
     api.getProfileInfo()
       .then((user) => {
@@ -134,31 +134,31 @@ function App() {
 
       <Footer/>
     
-     <EditProfilePopup
+    {isEditProfilePopupOpen && <EditProfilePopup
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
         onUpdateUser={handleUpdateUser}
-      />
+      />}
      
-      <AddPlacePopup
+      {isAddPlacePopupOpen && <AddPlacePopup
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}
         onAddPlace={handleAddPlaceSubmit}
 
-      />
+      />}
 
-      <EditAvatarPopup
+      {isEditAvatarPopupOpen && <EditAvatarPopup
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}
         onUpdateAvatar={handleUpdateAvatar}
-      />
+      />}
 
-      <ImagePopup 
+      {isImagePopupOpen && <ImagePopup 
         name='image'
         isOpen={isImagePopupOpen}
         onClose={closeAllPopups}
         card={selectedCard}
-      />
+      />}
 
       </CurrentUserContext.Provider> 
     </div>
